@@ -1,10 +1,5 @@
-from disco import Disco
-from symphonyOrchestra import SymphonyOrchestra
-from circusShow import CircusShow
-from sortOrder import SortOrder
-from concertHallManager import ConcertHallManager
-from instrument import Instrument
-from color import Color
+from models import *
+from managers import *
 
 
 def main():
@@ -15,11 +10,15 @@ def main():
     c = Disco("opera", 30, 25000, Color.RED, "techno")
     d = SymphonyOrchestra("opera", 40, 35000, "Ban", [Instrument.TRUMPET,
                                                       Instrument.CELLO])
-    l_dbac = [a, b, c, d]
+    l_dbac = [d, b, c, a]
     f = ConcertHallManager(l_dbac)
-    f.search_by_musicians_number()
+
+    f.sort_by_avg_price(SortOrder.ASC)
     f.print_performances()
-    f.sort_by_musicians_number(SortOrder.ASC)
+
+    f.search_by_musicians_number()
+    f.sort_by_musicians_number(SortOrder.DESC)
+    f.print_performances()
 
 
 if __name__ == "__main__":
