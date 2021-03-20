@@ -3,7 +3,7 @@ from .performance import Performance
 
 class SymphonyOrchestra(Performance):
     def __init__(self, name, musicians_number, avg_ticket_price, soloist_name,
-                 instruments: list):
+                 instruments):
         Performance.__init__(self, name, musicians_number, avg_ticket_price)
         self.__soloist_name = soloist_name
         self.__instruments = instruments
@@ -16,7 +16,7 @@ class SymphonyOrchestra(Performance):
               f"used:"
               )
         for i in self.__instruments:
-            print(i)
+            print(i.name)
 
     def get_soloist_name(self):
         return self.__soloist_name

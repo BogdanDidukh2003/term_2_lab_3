@@ -12,7 +12,7 @@ class Disco(Performance):
         print(f"In disco {self._name} there are "
               f"{self._musicians_number} musicians.\nAverage ticket price is "
               f"{self._avg_ticket_price}.\nThe color of the discoball is "
-              f"{self.__discoball_color}.\nHere you can hear "
+              f"{self.__discoball_color.name}.\nHere you can hear "
               f"{self.__music_genre} music."
               )
 

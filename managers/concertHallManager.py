@@ -1,6 +1,6 @@
 class ConcertHallManager:
 
-    def __init__(self, performances=list):
+    def __init__(self, performances):
         self.__performances = performances
 
     def search_by_musicians_number(self):
@@ -8,7 +8,6 @@ class ConcertHallManager:
         for i in self.__performances:
             if (i._musicians_number != 0):
                 output.append(i)
-        self.__performances = output
         return output
 
     def sort_by_musicians_number(self, order):

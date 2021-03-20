@@ -2,8 +2,8 @@ from .performance import Performance
 
 
 class CircusShow(Performance):
-    def __init__(self, name, musicians_number, avg_ticket_price, animals:
-                 list, acrobats_names: list):
+    def __init__(self, name, musicians_number, avg_ticket_price, animals,
+                 acrobats_names):
 
         Performance.__init__(self, name, musicians_number, avg_ticket_price)
         self.__animals = animals
@@ -16,7 +16,7 @@ class CircusShow(Performance):
               )
         for i in self.__acrobats_names:
             print(i)
-        print(f"Here are __animals that perform:")
+        print(f"Here are animals that perform:")
         for i in self.__animals:
             print(i)
 

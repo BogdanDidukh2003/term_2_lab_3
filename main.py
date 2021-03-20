@@ -16,9 +16,9 @@ def main():
     f.sort_by_avg_price(SortOrder.ASC)
     f.print_performances()
 
-    f.search_by_musicians_number()
-    f.sort_by_musicians_number(SortOrder.DESC)
-    f.print_performances()
+    a = ConcertHallManager(f.search_by_musicians_number())
+    a.sort_by_musicians_number(SortOrder.DESC)
+    a.print_performances()
 
 
 if __name__ == "__main__":
